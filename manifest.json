@@ -1,0 +1,10 @@
+{
+    "name": "Mon Plan 2028",
+    "short_name": "Plan 2028",
+    "description": "Application personnelle de gestion de mon budget et de mon objectif immobilier 2028",
+    "start_url": "./",
+    "display": "standalone",
+    "background_color": "#f5f7fa",
+    "theme_color": "#2563eb",
+    "lang": "fr-CA"
+}
