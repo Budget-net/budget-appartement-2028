@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -12,10 +12,261 @@
 
 <body>
 
+<header>
     <h1>🏠 Mon Plan 2028</h1>
-    <p>Objectif : acheter mon appartement en 2028</p>
+    <p>Finances • Appartement • Santé</p>
+</header>
 
-    <script src="app.js"></script>
+<main>
+
+    <!-- OBJECTIF APPARTEMENT -->
+
+    <section>
+        <h2>🏠 Appartement 2028</h2>
+
+        <div>
+            <p>Objectif de mise de fonds</p>
+
+            <input
+                type="number"
+                id="objectifAppartement"
+                placeholder="Ex. 45000"
+            >
+
+            <p>Mise de fonds actuelle</p>
+
+            <input
+                type="number"
+                id="miseDeFonds"
+                placeholder="Ex. 12000"
+            >
+
+            <p id="progressionAppartement">
+                Progression : 0 %
+            </p>
+
+            <progress
+                id="barreAppartement"
+                value="0"
+                max="100">
+            </progress>
+        </div>
+    </section>
+
+
+    <!-- REVENU -->
+
+    <section>
+        <h2>💰 Revenus du mois</h2>
+
+        <label>Salaire net</label>
+
+        <input
+            type="number"
+            id="salaire"
+            placeholder="0"
+        >
+
+        <label>Commission / Bonus</label>
+
+        <input
+            type="number"
+            id="commission"
+            placeholder="0"
+        >
+
+        <p>
+            Revenu total :
+            <strong id="revenuTotal">0 $</strong>
+        </p>
+    </section>
+
+
+    <!-- BUDGET -->
+
+    <section>
+        <h2>💳 Budget du mois</h2>
+
+        <label>🏠 Logement</label>
+        <input type="number" id="logement" placeholder="0">
+
+        <label>🥦 Épicerie</label>
+        <input type="number" id="epicerie" placeholder="0">
+
+        <label>🍽️ Restaurants / cafés</label>
+        <input type="number" id="restaurant" placeholder="0">
+
+        <label>🚗 Auto / transport</label>
+        <input type="number" id="auto" placeholder="0">
+
+        <label>🏋️ Sport</label>
+        <input type="number" id="sport" placeholder="0">
+
+        <label>🎉 Sorties / loisirs</label>
+        <input type="number" id="loisirs" placeholder="0">
+
+        <label>🛍️ Achats plaisir</label>
+        <input type="number" id="plaisir" placeholder="0">
+
+        <label>📦 Autres dépenses</label>
+        <input type="number" id="autres" placeholder="0">
+
+        <h3>
+            Total dépenses :
+            <span id="totalDepenses">0 $</span>
+        </h3>
+
+    </section>
+
+
+    <!-- ÉPARGNE -->
+
+    <section>
+        <h2>💰 Épargne et investissements</h2>
+
+        <label>🏠 CELIAPP</label>
+        <input type="number" id="celiapp" placeholder="0">
+
+        <label>🏡 Fonds appartement</label>
+        <input type="number" id="fondsAppartement" placeholder="0">
+
+        <label>📈 CELI</label>
+        <input type="number" id="celi" placeholder="0">
+
+        <label>📈 REER</label>
+        <input type="number" id="reer" placeholder="0">
+
+        <label>🛟 Fonds d'urgence</label>
+        <input type="number" id="urgence" placeholder="0">
+
+        <h3>
+            Total épargné :
+            <span id="totalEpargne">0 $</span>
+        </h3>
+
+    </section>
+
+
+    <!-- RÉSULTAT -->
+
+    <section>
+        <h2>📊 Résultat du mois</h2>
+
+        <p>
+            Revenus :
+            <strong id="resumeRevenu">0 $</strong>
+        </p>
+
+        <p>
+            Dépenses :
+            <strong id="resumeDepenses">0 $</strong>
+        </p>
+
+        <p>
+            Épargne :
+            <strong id="resumeEpargne">0 $</strong>
+        </p>
+
+        <p>
+            Argent restant :
+            <strong id="argentRestant">0 $</strong>
+        </p>
+
+        <p>
+            Taux d'épargne :
+            <strong id="tauxEpargne">0 %</strong>
+        </p>
+
+    </section>
+
+
+    <!-- COMMISSIONS -->
+
+    <section>
+        <h2>💼 Répartition de ma commission</h2>
+
+        <p>
+            🏠 Appartement 70 % :
+            <strong id="commissionAppartement">0 $</strong>
+        </p>
+
+        <p>
+            📈 Investissement 20 % :
+            <strong id="commissionInvestissement">0 $</strong>
+        </p>
+
+        <p>
+            🎉 Plaisir 10 % :
+            <strong id="commissionPlaisir">0 $</strong>
+        </p>
+
+    </section>
+
+
+    <!-- SANTÉ -->
+
+    <section>
+        <h2>❤️ Santé</h2>
+
+        <label>
+            Séances de sport ce mois-ci
+        </label>
+
+        <input
+            type="number"
+            id="seancesSport"
+            placeholder="0"
+        >
+
+        <label>
+            Objectif mensuel
+        </label>
+
+        <input
+            type="number"
+            id="objectifSport"
+            value="12"
+        >
+
+        <p id="statutSport">
+            Objectif : 12 séances
+        </p>
+
+    </section>
+
+
+    <!-- ACHAT -->
+
+    <section>
+        <h2>🤔 Puis-je me le permettre ?</h2>
+
+        <label>
+            Prix de l'achat envisagé
+        </label>
+
+        <input
+            type="number"
+            id="prixAchat"
+            placeholder="Ex. 900"
+        >
+
+        <button id="analyserAchat">
+            Analyser l'achat
+        </button>
+
+        <p id="resultatAchat"></p>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>Mon Plan 2028 • François</p>
+</footer>
+
+
+<script src="app.js"></script>
 
 </body>
 </html>
